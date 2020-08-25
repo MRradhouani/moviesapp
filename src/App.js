@@ -108,7 +108,7 @@ const App = () => {
   //       return el.name.toLowerCase().includes(Input);
   //   })
     
-  // //   setInput();
+  // //   setItems()=x;
   // };
 
   if (Input.length !== "") {
@@ -143,9 +143,10 @@ const App = () => {
 
 
   return <div>
+
     <input className="inputt"
       type="text"
-      placeholder="name of mivies"
+      placeholder="name of movies"
       onChange={handleChange}
       value={Input}
     />
@@ -157,7 +158,7 @@ const App = () => {
      ))}
   </ul> */}
 
-    <ul>
+    <ul  className="all">
 
       {items.filter((el) => {
         return el.name.toLowerCase().includes(Input);}).map((player) => (
@@ -177,7 +178,11 @@ const App = () => {
 
     {/* <ListMovies MOVIE={MOVIE} /> */}
 
-    <button className="button2" onClick={() => setmodalIsOpen(true)}> + </button>
+    <button className="button2" 
+    onClick={() => setmodalIsOpen(true)}
+    > +
+     </button>
+    
     <Modal className="modal" isOpen={modalIsOpen}
       shouldCloseOverLayClick={false}
       onRequestClose={() => setmodalIsOpen(false)}

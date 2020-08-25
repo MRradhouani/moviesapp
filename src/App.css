@@ -91,7 +91,14 @@ input[type=text]:focus {
 
 }
 .modal{
-  width: 1000px;
-  height: 300px;
+  width: 800px;
+  height: 400px;
+  display: block ;
+  margin: 0 auto ;
   
+}
+.all{
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
 }
